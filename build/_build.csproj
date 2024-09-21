@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace></RootNamespace>
+    <NoWarn>CS0649;CS0169</NoWarn>
+    <NukeRootDirectory>..</NukeRootDirectory>
+    <NukeScriptDirectory>..</NukeScriptDirectory>
+    <NukeTelemetryVersion>1</NukeTelemetryVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageDownload Include="Nuke.GlobalTool" Version="[8.1.0]" />
+    <PackageReference Include="protobuf-net.BuildTools" PrivateAssets="all" IncludeAssets="runtime;build;native;contentfiles;analyzers;buildtransitive" />
+    <PackageReference Include="GitHubActionsTestLogger">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Azure.Management.AppService.Fluent" />
+    <PackageReference Include="Nuke.Common" />
+    <PackageReference Include="docfx.console" ExcludeAssets="build" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" />
+    <PackageReference Include="Testcontainers.Pulsar" />
+    <PackageReference Include="Microsoft.DocAsCode.App" />
+    <PackageReference Include="xunit.runner.console">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageDownload Include="GitVersion.Tool" Version="[5.12.0]" />
+  </ItemGroup> 
+    <!--    
+    <ItemGroup>
+        <AdditionalFiles Include="..\src\Protobuf\PulsarApi.proto" OneOf="enum" ListSet="true" RepeatedAsList="true" IncludeInOutput="true"/>
+    </ItemGroup>
+    -->
+    
+
+</Project>

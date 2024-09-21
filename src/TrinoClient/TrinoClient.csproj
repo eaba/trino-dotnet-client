@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+      <TargetFramework>net8.0</TargetFramework>
+      <PackageReadmeFile>readme.md</PackageReadmeFile>
+      <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+      <PackageIconUrl />
+      <ImplicitUsings>enable</ImplicitUsings>
+      <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="Internal\zone-index.properties">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Akka" />
+        <PackageReference Include="HttpToSocks5Proxy" />
+        <PackageReference Include="NodaTime" />
+        <PackageReference Include="System.Text.Json" />
+        <PackageReference Include="System.Threading.Tasks.Dataflow"/>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="readme.md" Pack="true" PackagePath="\" />
+        <None Include="TrinoClient.jpg">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
+        <None Include="TrinoClient.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+</Project>
